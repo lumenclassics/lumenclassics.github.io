@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumen Classics | Bringing the Light of the Ancient World to Every Student</title>
+<meta name="description" content="Lumen Classics is a free, student-led classics education program bringing Latin, mythology, and the ancient world to underserved students in South Dallas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #faf7f0;
+    --marble: #f1ece1;
+    --ink: #2b2620;
+    --stone: #6b6257;
+    --gold: #b8963e;
+    --gold-dark: #967930;
+    --terracotta: #a4552e;
+    --line: #ddd4c3;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+  h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
+
+  /* ---------- Greek key divider ---------- */
+  .meander {
+    height: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14'%3E%3Cpath d='M0 0h28v2H2v10h10V6H8v4H6V4h8v10H0z' fill='%23b8963e' fill-opacity='0.55'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    width: 168px;
+    margin: 0 auto;
+  }
+
+  /* ---------- Nav ---------- */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(250, 247, 240, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    max-width: 1100px; margin: 0 auto; padding: 0.9rem 1.5rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  }
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 700; letter-spacing: 0.04em;
+    color: var(--ink); text-decoration: none;
+  }
+  .brand span { color: var(--gold-dark); }
+  .nav-links { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+  .nav-links a {
+    text-decoration: none; color: var(--stone);
+    font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500;
+  }
+  .nav-links a:hover { color: var(--gold-dark); }
+
+  /* ---------- Hero ---------- */
+  header.hero {
+    text-align: center;
+    padding: 6rem 1.5rem 5rem;
+    background:
+      radial-gradient(ellipse 70% 55% at 50% 0%, rgba(184,150,62,0.13), transparent),
+      var(--cream);
+  }
+  .hero .kicker {
+    letter-spacing: 0.3em; text-transform: uppercase; font-size: 0.78rem;
+    color: var(--gold-dark); font-weight: 500; margin-bottom: 1.4rem;
+  }
+  .hero h1 {
+    font-size: clamp(2.6rem, 6vw, 4.4rem);
+    font-weight: 600; letter-spacing: 0.02em; margin-bottom: 1rem;
+  }
+  .hero .motto {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 1.35rem; color: var(--stone); margin-bottom: 0.4rem;
+  }
+  .hero .motto-tr { font-size: 0.9rem; color: var(--stone); margin-bottom: 2.2rem; }
+  .hero p.lead {
+    max-width: 620px; margin: 0 auto 2.5rem; font-size: 1.05rem; color: var(--ink);
+  }
+  .btn {
+    display: inline-block; text-decoration: none;
+    padding: 0.85rem 2.1rem; letter-spacing: 0.14em; text-transform: uppercase;
+    font-size: 0.8rem; font-weight: 500; border-radius: 2px;
+  }
+  .btn-gold { background: var(--gold); color: #fff; }
+  .btn-gold:hover { background: var(--gold-dark); }
+  .btn-outline { border: 1px solid var(--gold); color: var(--gold-dark); margin-left: 0.8rem; }
+  .btn-outline:hover { background: rgba(184,150,62,0.1); }
+
+  /* ---------- Sections ---------- */
+  section { padding: 4.5rem 1.5rem; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .section-head { text-align: center; margin-bottom: 3rem; }
+  .section-head .kicker {
+    letter-spacing: 0.26em; text-transform: uppercase; font-size: 0.75rem;
+    color: var(--gold-dark); font-weight: 500;
+  }
+  .section-head h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); font-weight: 600; margin: 0.4rem 0 1.1rem; }
+  .alt { background: var(--marble); }
+
+  /* ---------- About ---------- */
+  .about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; }
+  .about-grid p { margin-bottom: 1.1rem; color: var(--stone); }
+  .about-grid p strong { color: var(--ink); font-weight: 500; }
+  .column-card {
+    background: var(--cream); border: 1px solid var(--line); padding: 2.2rem;
+    text-align: center;
+  }
+  .column-card .big-letter {
+    font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; line-height: 1;
+    color: var(--gold); margin-bottom: 0.6rem;
+  }
+  .column-card h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+  .column-card p { font-size: 0.92rem; color: var(--stone); }
+
+  /* ---------- Program cards / lessons ---------- */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.4rem; }
+  .card {
+    background: var(--cream); border: 1px solid var(--line);
+    padding: 1.8rem; border-top: 3px solid var(--gold);
+  }
+  .alt .card { background: #fff; }
+  .card .num {
+    font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-style: italic;
+    color: var(--gold-dark); margin-bottom: 0.4rem;
+  }
+  .card h3 { font-size: 1.35rem; font-weight: 600; margin-bottom: 0.55rem; }
+  .card p { font-size: 0.93rem; color: var(--stone); }
+
+  /* ---------- Impact ---------- */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.4rem; text-align: center; margin-bottom: 3rem; }
+  .stat .n {
+    font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 600; color: var(--gold-dark);
+  }
+  .stat .l { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--stone); }
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .ph {
+    aspect-ratio: 4 / 3; border: 1px dashed var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold-dark); font-size: 0.85rem; letter-spacing: 0.08em;
+    background: rgba(184,150,62,0.06); text-align: center; padding: 1rem;
+  }
+  blockquote {
+    max-width: 680px; margin: 3rem auto 0; text-align: center;
+    font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-style: italic; color: var(--ink);
+  }
+  blockquote footer { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; color: var(--stone); margin-top: 0.8rem; }
+
+  /* ---------- Blog ---------- */
+  .blog-box {
+    max-width: 700px; margin: 0 auto; text-align: center;
+    border: 1px solid var(--line); background: #fff; padding: 3rem 2rem;
+  }
+  .blog-box h3 { font-size: 1.6rem; margin-bottom: 0.7rem; }
+  .blog-box p { color: var(--stone); margin-bottom: 1.6rem; }
+
+  /* ---------- Get involved ---------- */
+  .tabs { display: flex; justify-content: center; gap: 0; margin-bottom: 2rem; }
+  .tab {
+    font-family: 'Inter', sans-serif; cursor: pointer;
+    background: none; border: 1px solid var(--gold); color: var(--gold-dark);
+    padding: 0.8rem 2rem; font-size: 0.8rem; letter-spacing: 0.14em;
+    text-transform: uppercase; font-weight: 500;
+  }
+  .tab:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+  .tab:last-child { border-radius: 0 2px 2px 0; }
+  .tab.active { background: var(--gold); color: #fff; }
+  .form-panel {
+    max-width: 640px; margin: 0 auto;
+    background: var(--cream); border: 1px solid var(--line); padding: 2.4rem;
+  }
+  .form-intro { font-size: 0.95rem; color: var(--stone); margin-bottom: 1.6rem; text-align: center; }
+  .form-panel label {
+    display: block; font-size: 0.82rem; letter-spacing: 0.06em; font-weight: 500;
+    color: var(--ink); margin-bottom: 1.1rem;
+  }
+  .form-panel .opt { color: var(--stone); font-weight: 300; }
+  .form-panel input:not([type="hidden"]), .form-panel textarea {
+    display: block; width: 100%; margin-top: 0.35rem;
+    padding: 0.65rem 0.8rem; font-family: 'Inter', sans-serif; font-size: 0.95rem;
+    border: 1px solid var(--line); border-radius: 2px; background: #fff; color: var(--ink);
+  }
+  .form-panel input:focus, .form-panel textarea:focus { outline: 2px solid var(--gold); border-color: var(--gold); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-panel .btn { border: none; cursor: pointer; font-family: 'Inter', sans-serif; margin-top: 0.4rem; }
+
+  /* ---------- Footer ---------- */
+  footer.site {
+    background: var(--ink); color: #cfc8bc; text-align: center; padding: 3rem 1.5rem;
+  }
+  footer.site .brand { color: #fff; }
+  footer.site .brand span { color: var(--gold); }
+  footer.site p { font-size: 0.85rem; margin-top: 0.8rem; }
+  footer.site a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 760px) {
+    .about-grid, .form-row { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .btn-outline { margin-left: 0; margin-top: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">Lumen <span>Classics</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#program">Program</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#impact">Impact</a>
+      <a href="#blog">Blog</a>
+      <a href="#involved">Get Involved</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="kicker">A student-led classics program</div>
+  <h1>Lumen Classics</h1>
+  <div class="motto serif">Ad lumen per litteras</div>
+  <div class="motto-tr">To the light, through literature</div>
+  <p class="lead">We bring the myths, languages, and ideas of ancient Greece and Rome, free of charge, to students in South Dallas who have never been offered them. Because the classics belong to everyone.</p>
+  <a class="btn btn-gold" href="#involved" onclick="showTab('student')">Join the Program</a>
+  <a class="btn btn-outline" href="#involved" onclick="showTab('partner')">Partner With Us</a>
+</header>
+
+<div style="padding: 2.5rem 0;"><div class="meander"></div></div>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Our Mission</div>
+      <h2>Out of the Shadows, Into the Light</h2>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p><strong>Lumen is Latin for "light."</strong> For centuries, a classical education was the mark of privilege: Latin, Greek mythology, and ancient history were taught behind the gates of elite schools. Lumen Classics exists to open those gates.</p>
+        <p>Founded and taught by <strong>Pedro Falcão</strong>, a student at St. Mark's School of Texas, Lumen Classics designs and delivers free, engaging classics courses for underserved students in South Dallas, from the wrath of Achilles to their first words of Latin.</p>
+        <p>We believe the ancient world isn't a museum piece. It's a training ground for language, logic, storytelling, and confidence, and every student deserves a seat in the forum.</p>
+      </div>
+      <div class="column-card">
+        <div class="big-letter serif">Λ</div>
+        <h3>Why the Classics?</h3>
+        <p>Students who study classics build vocabulary, sharpen critical thinking, and discover that the big questions of justice, courage, and fate have been theirs to ask for 3,000 years.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="program">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">The Program</div>
+      <h2>What We Do</h2>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="num">I</div>
+        <h3>Free Weekly Classes</h3>
+        <p>Small-group sessions in South Dallas covering mythology, Latin fundamentals, and daily life in Greece and Rome, designed to be fun first, rigorous always.</p>
+      </div>
+      <div class="card">
+        <div class="num">II</div>
+        <h3>Student-Designed Curriculum</h3>
+        <p>Every lesson is written by students, for students. No dusty textbooks: stories, games, debates, and projects that make the ancient world feel alive.</p>
+      </div>
+      <div class="card">
+        <div class="num">III</div>
+        <h3>Lumen Scholars</h3>
+        <p>Our participants aren't just attendees; they're Lumen Scholars, part of a community that celebrates curiosity and rewards commitment.</p>
+      </div>
+      <div class="card">
+        <div class="num">IV</div>
+        <h3>Growing Network</h3>
+        <p>We partner with schools, libraries, and community centers to reach more students, and we're actively expanding to new institutions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="lessons">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Curriculum</div>
+      <h2>Sample Lessons</h2>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="num">Unit I</div>
+        <h3>Gods &amp; Monsters</h3>
+        <p>The Olympians, the Titans, and the creatures in between. Students map the mythological family tree and debate which god they'd want on their side.</p>
+      </div>
+      <div class="card">
+        <div class="num">Unit II</div>
+        <h3>Heroes &amp; Epics</h3>
+        <p>Odysseus, Aeneas, Hercules. What makes a hero? Students retell epic episodes in their own voice, and write themselves into the story.</p>
+      </div>
+      <div class="card">
+        <div class="num">Unit III</div>
+        <h3>First Words in Latin</h3>
+        <p>Salve! Students learn greetings, numbers, and the Latin hiding inside everyday English, and leave able to read simple Latin sentences.</p>
+      </div>
+      <div class="card">
+        <div class="num">Unit IV</div>
+        <h3>A Day in Ancient Rome</h3>
+        <p>From the Forum to the Colosseum: food, school, games, and jobs in the ancient city. Ends with a Roman-style class debate in the "Senate."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="impact">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Impact</div>
+      <h2>The Story So Far</h2>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n serif">[XX]</div><div class="l">Students Taught</div></div>
+      <div class="stat"><div class="n serif">[XX]</div><div class="l">Lessons Delivered</div></div>
+      <div class="stat"><div class="n serif">[X]</div><div class="l">Partner Sites</div></div>
+      <div class="stat"><div class="n serif">100%</div><div class="l">Free of Charge</div></div>
+    </div>
+    <div class="gallery">
+      <div class="ph">Photo: class in session</div>
+      <div class="ph">Photo: student projects</div>
+      <div class="ph">Photo: community event</div>
+    </div>
+    <blockquote>
+      "[Student or parent testimonial goes here: one or two sentences about what the program meant to them.]"
+      <footer>Lumen Scholar, South Dallas</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section id="blog">
+  <div class="container">
+    <div class="blog-box">
+      <div class="kicker" style="letter-spacing:0.26em;text-transform:uppercase;font-size:0.75rem;color:var(--gold-dark);font-weight:500;">The Blog</div>
+      <h3 class="serif">Weekly Writing on the Ancient World</h3>
+      <p>Every week, our founder publishes essays on classics, education, and why the ancient world still matters. Read them on Medium.</p>
+      <a class="btn btn-gold" href="https://medium.com/@Pbajonfalcao" target="_blank" rel="noopener">Read on Medium</a>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="involved">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Get Involved</div>
+      <h2>Join the Forum</h2>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="tab active" id="tab-student" onclick="showTab('student')" type="button">Sign Up</button>
+      <button class="tab" id="tab-partner" onclick="showTab('partner')" type="button">Partner With Us</button>
+    </div>
+
+    <div class="form-panel" id="panel-student">
+      <p class="form-intro">Want to become a Lumen Scholar? Classes are completely free and open to students in the South Dallas area. Fill this out and we'll save you a seat.</p>
+      <form action="https://formsubmit.co/lumenclassicsprogram@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Lumen Scholar signup">
+        <input type="hidden" name="form_type" value="Student signup">
+        <input type="text" name="_honey" style="display:none">
+        <div class="form-row">
+          <label>Student's name<input type="text" name="Student name" required></label>
+          <label>Grade<input type="text" name="Grade" placeholder="e.g. 6th" required></label>
+        </div>
+        <div class="form-row">
+          <label>Parent or guardian's name<input type="text" name="Parent/guardian" required></label>
+          <label>Email or phone<input type="text" name="Contact" required></label>
+        </div>
+        <label>School or neighborhood<input type="text" name="School/neighborhood"></label>
+        <label>Anything you'd like us to know? <span class="opt">(optional)</span><textarea name="Message" rows="4"></textarea></label>
+        <button class="btn btn-gold" type="submit">Save My Seat</button>
+      </form>
+    </div>
+
+    <div class="form-panel" id="panel-partner" hidden>
+      <p class="form-intro">Are you a school, library, or community organization interested in hosting Lumen Classics? We bring the curriculum, the teaching, and the energy; you bring the students.</p>
+      <form action="https://formsubmit.co/lumenclassicsprogram@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Lumen Classics partnership inquiry">
+        <input type="hidden" name="form_type" value="Partnership inquiry">
+        <input type="text" name="_honey" style="display:none">
+        <div class="form-row">
+          <label>Organization<input type="text" name="Organization" required></label>
+          <label>Your name &amp; role<input type="text" name="Contact name and role" required></label>
+        </div>
+        <div class="form-row">
+          <label>Email<input type="email" name="Email" required></label>
+          <label>Phone <span class="opt">(optional)</span><input type="tel" name="Phone"></label>
+        </div>
+        <label>How would you like to work together?<textarea name="Message" rows="4" required></textarea></label>
+        <button class="btn btn-gold" type="submit">Send Inquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site" id="contact">
+  <a class="brand serif" href="#top" style="font-size:1.6rem;text-decoration:none;">Lumen <span>Classics</span></a>
+  <p><em class="serif">Ad lumen per litteras</em>: To the light, through literature</p>
+  <p>South Dallas, Texas · <a href="mailto:lumenclassicsprogram@gmail.com">lumenclassicsprogram@gmail.com</a></p>
+  <p>© 2026 Lumen Classics. Founded by Pedro Falcão, St. Mark's School of Texas.</p>
+</footer>
+
+<script>
+function showTab(which) {
+  document.getElementById('panel-student').hidden = which !== 'student';
+  document.getElementById('panel-partner').hidden = which !== 'partner';
+  document.getElementById('tab-student').classList.toggle('active', which === 'student');
+  document.getElementById('tab-partner').classList.toggle('active', which === 'partner');
+}
+</script>
+
+</body>
+</html>
