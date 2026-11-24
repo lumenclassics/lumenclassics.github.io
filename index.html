@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lumen Classics | Bringing the Light of the Ancient World to Every Student</title>
 <meta name="description" content="Lumen Classics is a free, student-led classics education program bringing Latin, mythology, and the ancient world to underserved students in South Dallas.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2215%22%20fill%3D%22%232b2620%22/%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2212.5%22%20fill%3D%22none%22%20stroke%3D%22%23b8963e%22%20stroke-width%3D%221%22/%3E%3Cpath%20d%3D%22M9.5%2023%20L16%208%20L22.5%2023%22%20fill%3D%22none%22%20stroke%3D%22%23d9b866%22%20stroke-width%3D%222.6%22%20stroke-linejoin%3D%22miter%22/%3E%3Cpath%20d%3D%22M7.8%2023%20H11.4%20M20.6%2023%20H24.2%22%20stroke%3D%22%23d9b866%22%20stroke-width%3D%221.4%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -62,6 +63,29 @@
     font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500;
   }
   .nav-links a:hover { color: var(--gold-dark); }
+
+
+  /* ---------- Lambda mark ---------- */
+  .mark {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 2.1rem; height: 2.1rem; border-radius: 50%;
+    border: 1.5px solid var(--gold); color: var(--gold-dark);
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 1.25rem; line-height: 1; padding-top: 0.12em;
+    margin-right: 0.55rem; vertical-align: middle;
+  }
+  .brand { display: inline-flex; align-items: center; }
+  .brand .mark { color: var(--gold-dark); }
+  .hero-mark {
+    width: 96px; height: 96px; margin: 0 auto 1.6rem; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    border: 1.5px solid var(--gold);
+    box-shadow: 0 0 0 6px var(--cream), 0 0 0 7px rgba(184,150,62,0.45), 0 0 40px rgba(184,150,62,0.25);
+    font-family: 'Cormorant Garamond', serif; font-size: 3.4rem; font-weight: 600;
+    color: var(--gold-dark); padding-top: 0.1em; background: rgba(255,255,255,0.5);
+  }
+  .mark-note { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--stone); margin-top: -0.2rem; margin-bottom: 0.8rem; font-style: italic; }
+  footer.site .mark { border-color: var(--gold); color: var(--gold); width: 2.4rem; height: 2.4rem; font-size: 1.45rem; }
 
   /* ---------- Hero ---------- */
   header.hero {
@@ -207,7 +231,7 @@
 
 <nav>
   <div class="nav-inner">
-    <a class="brand" href="#top">Lumen <span>Classics</span></a>
+    <a class="brand" href="#top"><b class="mark">Λ</b>Lumen&nbsp;<span>Classics</span></a>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#program">Program</a>
@@ -221,6 +245,7 @@
 </nav>
 
 <header class="hero" id="top">
+  <div class="hero-mark" aria-hidden="true">Λ</div>
   <div class="kicker">A student-led classics program</div>
   <h1>Lumen Classics</h1>
   <div class="motto serif">Ad lumen per litteras</div>
@@ -246,6 +271,7 @@
       </div>
       <div class="column-card">
         <div class="big-letter serif">Λ</div>
+        <div class="mark-note">Lambda, the Greek letter L: the L of Lumen.</div>
         <h3>Why the Classics?</h3>
         <p>Students who study classics build vocabulary, sharpen critical thinking, and discover that the big questions of justice, courage, and fate have been theirs to ask for 3,000 years.</p>
       </div>
@@ -397,7 +423,7 @@
 </section>
 
 <footer class="site" id="contact">
-  <a class="brand serif" href="#top" style="font-size:1.6rem;text-decoration:none;">Lumen <span>Classics</span></a>
+  <a class="brand serif" href="#top" style="font-size:1.6rem;text-decoration:none;"><b class="mark">Λ</b>Lumen&nbsp;<span>Classics</span></a>
   <p><em class="serif">Ad lumen per litteras</em>: To the light, through literature</p>
   <p>South Dallas, Texas · <a href="mailto:lumenclassicsprogram@gmail.com">lumenclassicsprogram@gmail.com</a></p>
   <p>© 2026 Lumen Classics. Founded by Pedro Falcão, St. Mark's School of Texas.</p>
