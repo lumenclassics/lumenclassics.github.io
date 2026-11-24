@@ -143,18 +143,11 @@
     font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 600; color: var(--gold-dark);
   }
   .stat .l { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--stone); }
-  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
-  .ph {
-    aspect-ratio: 4 / 3; border: 1px dashed var(--gold);
-    display: flex; align-items: center; justify-content: center;
-    color: var(--gold-dark); font-size: 0.85rem; letter-spacing: 0.08em;
-    background: rgba(184,150,62,0.06); text-align: center; padding: 1rem;
+  .gallery { max-width: 900px; margin: 0 auto; }
+  .gallery img {
+    width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;
+    border-top: 3px solid var(--gold);
   }
-  blockquote {
-    max-width: 680px; margin: 3rem auto 0; text-align: center;
-    font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-style: italic; color: var(--ink);
-  }
-  blockquote footer { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.85rem; color: var(--stone); margin-top: 0.8rem; }
 
   /* ---------- Blog ---------- */
   .blog-box {
@@ -248,7 +241,7 @@
     <div class="about-grid">
       <div>
         <p><strong>Lumen is Latin for "light."</strong> For centuries, a classical education was the mark of privilege: Latin, Greek mythology, and ancient history were taught behind the gates of elite schools. Lumen Classics exists to open those gates.</p>
-        <p>Founded and taught by Pedro Bajon Falcao, a student at St. Mark's School of Texas, Lumen Classics designs and delivers free, engaging classics courses for underserved students in South Dallas, from the wrath of Achilles to their first words of Latin.</p>
+        <p>Founded and taught by <strong>Pedro Falcão</strong>, a student at St. Mark's School of Texas, Lumen Classics designs and delivers free, engaging classics courses for underserved students in South Dallas, from the wrath of Achilles to their first words of Latin.</p>
         <p>We believe the ancient world isn't a museum piece. It's a training ground for language, logic, storytelling, and confidence, and every student deserves a seat in the forum.</p>
       </div>
       <div class="column-card">
@@ -329,20 +322,14 @@
       <h2>The Story So Far</h2>
     </div>
     <div class="stats">
-      <div class="stat"><div class="n serif">[XX]</div><div class="l">Students Taught</div></div>
-      <div class="stat"><div class="n serif">[XX]</div><div class="l">Lessons Delivered</div></div>
-      <div class="stat"><div class="n serif">[X]</div><div class="l">Partner Sites</div></div>
+      <div class="stat"><div class="n serif">30</div><div class="l">Students Taught</div></div>
+      <div class="stat"><div class="n serif">10</div><div class="l">Lessons Delivered</div></div>
+      <div class="stat"><div class="n serif">1</div><div class="l">Partner Site</div></div>
       <div class="stat"><div class="n serif">100%</div><div class="l">Free of Charge</div></div>
     </div>
     <div class="gallery">
-      <div class="ph">Photo: class in session</div>
-      <div class="ph">Photo: student projects</div>
-      <div class="ph">Photo: community event</div>
+      <img src="images/class-6402.jpg" alt="Lumen Classics class in session at a South Dallas school" loading="lazy">
     </div>
-    <blockquote>
-      "[Student or parent testimonial goes here: one or two sentences about what the program meant to them.]"
-      <footer>Lumen Scholar, South Dallas</footer>
-    </blockquote>
   </div>
 </section>
 
@@ -413,7 +400,7 @@
   <a class="brand serif" href="#top" style="font-size:1.6rem;text-decoration:none;">Lumen <span>Classics</span></a>
   <p><em class="serif">Ad lumen per litteras</em>: To the light, through literature</p>
   <p>South Dallas, Texas · <a href="mailto:lumenclassicsprogram@gmail.com">lumenclassicsprogram@gmail.com</a></p>
-  <p>© 2026 Lumen Classics. Founded by Pedro Bajon Falcão, St. Mark's School of Texas.</p>
+  <p>© 2026 Lumen Classics. Founded by Pedro Falcão, St. Mark's School of Texas.</p>
 </footer>
 
 <script>
